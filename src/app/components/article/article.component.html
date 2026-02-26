@@ -1,13 +1,15 @@
-<article class="flex-1 gap-8">
+<article class="grid gap-8">
     <div class="w-full bg-[#BDBDBD] rounded-lg items-center h-60">
         <span>image</span>
     </div>
-    <div class="grid gap-2">
-        <p class="text-sm font-semibold flex items-center gap-1"> 
+    <p class="text-sm font-semibold flex items-center gap-1"> 
         <img src="images/icons/Calendar.svg" alt="icon calendar">
-        Lorem ipsum dolor sit amet</p>
-        <h3 class="font-bold text-2xl">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.</p>
-        
-    </div>
+        {{ article.description }}
+    </p>
+    <h3 class="font-bold text-[23px] md:text-3xl text-black">
+        {{ article.title }}
+    </h3>
+    <p class="line-clamp-6">
+        {{ article.content }}
+    </p>
 </article>

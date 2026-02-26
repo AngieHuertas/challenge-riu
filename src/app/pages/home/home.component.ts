@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { FeaturedArticleComponent } from '../../components/featured-article/featured-article.component';
 import { ArticleComponent } from '../../components/article/article.component';
 
@@ -12,5 +12,5 @@ import { ArticleComponent } from '../../components/article/article.component';
   styles: ``
 })
 export class HomePage {
-
+  articles = signal([1, 2, 3, 4]);
 }

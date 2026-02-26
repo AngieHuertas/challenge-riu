@@ -13,12 +13,15 @@
       </div>
     </div>
 
-    <div class="articles grid gap-12 w-full">
-      <app-article></app-article>
+    <div class="articles grid gap-12 w-full md:grid-cols-2">
+      @for(item of articles(); track $index){
+        <app-article></app-article>
+      }
+      
     </div>
 
     <div class="grid gap-6">
-      <h2 class="font-bold text-3xl">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et.</h2>
+      <h2 class="font-bold text-3xl md:text-5xl text-black">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et.</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.</p>
     </div>
   </div>
