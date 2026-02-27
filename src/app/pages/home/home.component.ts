@@ -3,6 +3,7 @@ import { FeaturedArticleComponent } from '../../components/featured-article/feat
 import { ArticleComponent } from '../../components/article/article.component';
 import { SwiperItemComponent } from '../../components/swiper-item/swiper-item.component';
 import { register } from 'swiper/element/bundle';
+import { SearchBarComponent } from '../../components/search-bar/search-bar.component';
 
 register();
 
@@ -11,13 +12,16 @@ register();
   imports: [
     FeaturedArticleComponent,
     ArticleComponent,
-    SwiperItemComponent
+    SwiperItemComponent,
+    SearchBarComponent
   ],
+  standalone: true,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './home.component.html',
   styles: ``
 })
 export class HomePage {
   articles = signal([1, 2, 3, 4]);
+  articlesHidden = signal([1, 2]);
   swiperItems = signal([1, 2, 3, 4]);
 }

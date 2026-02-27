@@ -8,4 +8,6 @@
 
     --color-gray-text: #343A40;
     --color-button-active: #E4002B;
+
+    --breakpoint-2xl: 100rem;
 }

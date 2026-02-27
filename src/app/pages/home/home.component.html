@@ -8,24 +8,16 @@
     <div class="grid gap-12 justify-around 2xl:w-7xl">
       <div class="w-full ">
         <h2 class="text-black font-bold text-3xl mb-6 md:text-5xl">Lorem ipsum dolor sit</h2>
-        <div class="grid gap-2.5 md:grid-cols-2 md:justify-between md:items-center">
-          <p class="text-black text-[18px]">Lorem ipsum dolor sit amet</p>
-
-          <div class="relative flex flex-col h-10 w-full md:w-75 bg-[#F4F4F5] rounded-lg md:place-self-end items-end justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 absolute left-3 top-3 stroke-[#1C274C]">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-            </svg>
-            <input id="search" type="text" name="search" class="outline-0 border-0 focus:outline-none w-[88%]">
-          </div>
-          
-        </div>
+        <app-search-bar></app-search-bar>
       </div>
 
-      <div class="articles grid gap-12 w-full md:grid-cols-2 2xl:w-7xl">
+      <div class="articles grid gap-12 w-full md:grid-cols-2 2xl:grid-cols-3 2xl:w-7xl">
         @for(item of articles(); track $index){
           <app-article></app-article>
         }
-        
+        @for(item of articlesHidden(); track $index){
+          <app-article class="hidden 2xl:block"></app-article>
+        }
       </div>
 
       <div class="grid gap-6 2xl:w-7xl">

@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-featured-article',
   imports: [],
+  standalone: true,
   templateUrl: './featured-article.component.html',
   styleUrl: './featured-article.component.css'
 })
