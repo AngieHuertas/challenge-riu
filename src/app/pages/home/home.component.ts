@@ -17,4 +17,5 @@ register();
 })
 export class HomePage {
   articles = signal([1, 2, 3, 4]);
+  swiperItems = signal([1, 2, 3, 4]);
 }

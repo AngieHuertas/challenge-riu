@@ -39,31 +39,24 @@
           }"
           class="o-carousel__container">
           
-          <swiper-slide class="o-carousel__slide">
-            <div class="h-80 bg-gray-500">
-              <span>image 1</span>
-            </div>
-          </swiper-slide>
-          <swiper-slide class="o-carousel__slide">
-            <div class="h-80 bg-gray-500">
-              <span>image 2</span>
-            </div>
-          </swiper-slide>
-          <swiper-slide class="o-carousel__slide">
-            <div class=" h-80 bg-gray-500">
-              <span>image 3</span>
-            </div>
-          </swiper-slide>
-          <swiper-slide class="o-carousel__slide">
-            <div class="h-80 bg-gray-500">
-              <span>image 4</span>
-            </div>
-          </swiper-slide>
+          @for( item of swiperItems(); track $index ){
+            <swiper-slide class="o-carousel__slide">
+              <div class="h-120.5 bg-gray-500 flex rounded-lg"> 
+                <span>image 1</span>
+                <div class="rounded-b-lg bg-linear-to-b from-transparent to-black absolute bottom-0 h-44 w-full p-4 ">
+                  <h3 class="text-3xl text-white font-bold mb-2">Lorem impsum</h3>
+                  <p class="text-white mb-8">Lorem ipsum dolor, sit amet consectetur</p>
+                  <div class="text-white">
+                    Lorem impsum 
+                  </div>
+                </div>
+              </div>
+            </swiper-slide>
+          }
+          
         </swiper-container>
       </div>
     </div>
     
-    
   </div>
-
 </main>
