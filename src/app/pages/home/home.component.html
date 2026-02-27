@@ -41,8 +41,8 @@
           
           @for( item of swiperItems(); track $index ){
             <swiper-slide class="o-carousel__slide">
-              <div class="h-120.5 bg-gray-500 flex rounded-lg"> 
-                <span>image 1</span>
+              <div class="h-120.5 bg-gray-500 flex rounded-lg overflow-hidden bg-cover bg-center" [style.background-image]="'url(images/swipe2.jpg)'"> 
+                
                 <div class="rounded-b-lg bg-linear-to-b from-transparent to-black absolute bottom-0 h-44 w-full p-4 ">
                   <h3 class="text-3xl text-white font-bold mb-2">Lorem impsum</h3>
                   <p class="text-white mb-8">Lorem ipsum dolor, sit amet consectetur</p>
