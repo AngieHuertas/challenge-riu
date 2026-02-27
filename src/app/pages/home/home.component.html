@@ -4,49 +4,52 @@
   <app-featured-article></app-featured-article>
   <!-- Content -->
 
-  <div class="bg-white px-6 py-8 2xl:py-24 justify-around flex">
-    <div class="grid gap-12 justify-around 2xl:w-7xl">
-      <div class="w-full ">
-        <h2 class="text-black font-bold text-3xl mb-6 md:text-5xl">Lorem ipsum dolor sit</h2>
-        <app-search-bar></app-search-bar>
-      </div>
+  <div class="bg-white 2xl:justify-center grid">
+    <div class="grid 2xl:items-center">
+      <section class="px-6 py-8 md:px-8 md:py-12 grid gap-12 2xl:py-24">
+        <div class="w-full ">
+          <h2 class="text-black font-bold text-3xl mb-6 md:text-5xl">Lorem ipsum dolor sit</h2>
+          <app-search-bar></app-search-bar>
+        </div>
 
-      <div class="articles grid gap-12 w-full md:grid-cols-2 2xl:grid-cols-3 2xl:w-7xl">
-        @for(item of articles(); track $index){
-          <app-article></app-article>
-        }
-        @for(item of articlesHidden(); track $index){
-          <app-article class="hidden 2xl:block"></app-article>
-        }
-      </div>
-
-      <div class="grid gap-6 2xl:w-7xl">
-        <h2 class="font-bold text-3xl md:text-5xl text-black">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et.</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.</p>
-      </div>
-
-
-      <div class="o-carousel w-[85vw] md:w-[90vw] 2xl:w-7xl m-auto">
-        <swiper-container 
-          slides-per-view="1.5" 
-          navigation="false" 
-          pagination="false"
-          space-between="20"
-          [breakpoints]="{
-            '768': { slidesPerView: 1.8 },
-            '1524': { slidesPerView: 4 }
-          }"
-          class="o-carousel__container">
-          
-          @for( item of swiperItems(); track $index ){
-            <swiper-slide class="o-carousel__slide">
-              <app-swiper-item></app-swiper-item>
-            </swiper-slide>
+        <div class="articles grid gap-12 w-full md:grid-cols-2 2xl:grid-cols-3 2xl:w-7xl">
+          @for(item of articles(); track $index){
+            <app-article></app-article>
           }
-          
-        </swiper-container>
-      </div>
-    </div>
+          @for(item of articlesHidden(); track $index){
+            <app-article class="hidden 2xl:block"></app-article>
+          }
+        </div>
+      </section>
+      
+      <section class="px-6 py-8 md:px-8 md:py-12 2xl:py-24">
+        <div class="grid gap-6 2xl:w-7xl mb-12">
+          <h2 class="font-bold text-3xl md:text-5xl text-black leading-8 md:leading-14.5">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et.</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.</p>
+        </div>
+
+        <div class="o-carousel w-[85vw] md:w-[90vw] 2xl:w-7xl m-auto">
+          <swiper-container 
+            slides-per-view="1.5" 
+            navigation="false" 
+            pagination="false"
+            space-between="20"
+            [breakpoints]="{
+              '768': { slidesPerView: 1.8 },
+              '1524': { slidesPerView: 4 }
+            }"
+            class="o-carousel__container">
+            
+            @for( item of swiperItems(); track $index ){
+              <swiper-slide class="o-carousel__slide">
+                <app-swiper-item></app-swiper-item>
+              </swiper-slide>
+            }
+          </swiper-container>
+        </div>
+      </section>
+      
     
+    </div>
   </div>
 </main>
